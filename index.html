@@ -3,19 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CI/CD Website</title>
+    <title>CI/CD Pipeline Deployment</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 min-h-screen flex items-center justify-center">
+<body class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 min-h-screen flex items-center justify-center p-4">
 
-    <div class="bg-white p-10 rounded-lg shadow-lg text-center">
-        <h1 class="text-4xl font-bold text-gray-800">🚀 CI/CD Deployed Website</h1>
-        <p class="text-lg text-gray-600 mt-4">This website is automatically deployed using GitHub Actions.</p>
+    <div class="bg-white p-10 md:p-14 rounded-lg shadow-lg text-center max-w-2xl w-full">
+        <!-- Animated Heading -->
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 animate-fadeIn">
+            🚀 CI/CD Pipeline Deployed Website
+        </h1>
         
-        <button class="mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
-            Explore More
+        <!-- Subtext -->
+        <p class="text-lg text-gray-600 mt-4 animate-fadeInSlow">
+            This website is automatically deployed using GitHub Actions.
+        </p>
+
+        <!-- Explanation Section -->
+        <div class="mt-6">
+            <h2 class="text-2xl font-semibold text-gray-700">How It Works?</h2>
+            <p class="text-gray-600 mt-2 text-sm md:text-base">
+                - When we push updates to GitHub, GitHub Actions triggers an **automated deployment**. <br>
+                - The website is built and hosted on **GitHub Pages** with **Tailwind CSS** for styling. <br>
+                - Changes are instantly reflected without manual intervention! 🚀
+            </p>
+        </div>
+
+        <!-- Animated Button -->
+        <button class="mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md 
+                       hover:bg-blue-700 transition transform hover:scale-105">
+            Learn More
         </button>
     </div>
+
+    <style>
+        /* Custom Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInSlow {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fadeIn { animation: fadeIn 1s ease-out; }
+        .animate-fadeInSlow { animation: fadeInSlow 1.5s ease-out; }
+    </style>
 
 </body>
 </html>
