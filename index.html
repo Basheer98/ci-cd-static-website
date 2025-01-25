@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CI/CD Pipeline Deployment</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap">
     <style>
-        /* Smooth Background Gradient Animation */
-        @keyframes gradientAnimation {
+        /* Smooth Background Animation */
+        @keyframes gradientShift {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
         .animate-bg {
-            background-size: 300% 300%;
-            animation: gradientAnimation 12s ease infinite;
+            background-size: 200% 200%;
+            animation: gradientShift 15s infinite ease-in-out;
         }
 
         /* Fade-in Animation */
@@ -23,45 +24,74 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .animate-fadeIn {
-            animation: fadeIn 1s ease-out;
+            animation: fadeIn 1.2s ease-out;
         }
 
-        /* Glowing Text Effect */
-        .glow-text {
-            background: linear-gradient(90deg, #ffdd00, #ff8800, #ff00aa, #8800ff);
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradientAnimation 5s ease infinite;
+        /* Glassmorphism Card */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Soft Neumorphism Effect */
+        .soft-ui {
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2), 
+                        -10px -10px 30px rgba(255, 255, 255, 0.15);
+        }
+
+        /* Modern Professional Font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Header Styling */
+        .title-text {
+            font-weight: 800;
+            letter-spacing: -1px;
         }
     </style>
 </head>
-<body class="animate-bg bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 min-h-screen flex items-center justify-center p-6">
+<body class="animate-bg bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 min-h-screen flex items-center justify-center p-6">
 
-    <div class="bg-white/20 backdrop-blur-xl shadow-2xl rounded-3xl px-10 py-12 text-center w-full max-w-2xl animate-fadeIn">
-        <!-- Icon -->
+    <div class="glass soft-ui px-12 py-14 text-center w-full max-w-3xl animate-fadeIn">
+        <!-- Floating Icon -->
         <div class="mb-4">
-            <span class="text-6xl">🚀</span>
+            <span class="text-7xl text-white drop-shadow-lg">🚀</span>
         </div>
 
-        <!-- Heading with Glowing Effect -->
-        <h1 class="text-4xl md:text-5xl font-extrabold glow-text drop-shadow-lg">
-            CI/CD Pipeline <span class="text-yellow-300">Deployed Website</span>
+        <!-- Main Title -->
+        <h1 class="text-5xl md:text-6xl title-text text-white drop-shadow-md">
+            Next-Gen CI/CD Deployment
         </h1>
 
         <!-- Subtitle -->
-        <p class="text-lg text-white/90 mt-4 leading-relaxed">
-            This website is <span class="font-semibold">automatically deployed</span> using GitHub Actions and styled with Tailwind CSS.
+        <p class="text-lg text-gray-300 mt-5 leading-relaxed">
+            Experience seamless, **fully automated** deployments powered by GitHub Actions and crafted with **cutting-edge UI**.
         </p>
 
         <!-- How It Works Section -->
-        <div class="mt-8 text-white text-left space-y-4">
-            <h2 class="text-2xl font-semibold border-b border-white/30 pb-2">How It Works?</h2>
-            <ul class="list-disc list-inside space-y-2 text-white/80">
-                <li>✅ Push updates to GitHub → **Triggers automated deployment**</li>
-                <li>✅ GitHub Actions builds and hosts the site on **GitHub Pages**</li>
-                <li>✅ Tailwind CSS ensures a sleek, modern design</li>
-                <li>✅ Changes are reflected **instantly** without manual intervention 🚀</li>
+        <div class="mt-10 text-gray-200 text-left space-y-4">
+            <h2 class="text-2xl font-semibold border-b border-gray-600 pb-2">How It Works?</h2>
+            <ul class="list-none space-y-3">
+                <li class="flex items-center gap-3">
+                    <span class="text-green-400 text-xl">✔</span>
+                    <span class="text-gray-300">Push to GitHub → **Instant Deployment**</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <span class="text-blue-400 text-xl">✔</span>
+                    <span class="text-gray-300">Built & Hosted on **GitHub Pages**</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <span class="text-purple-400 text-xl">✔</span>
+                    <span class="text-gray-300">Designed with **Tailwind CSS & Glassmorphism**</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <span class="text-pink-400 text-xl">✔</span>
+                    <span class="text-gray-300">Instant updates without manual effort 🚀</span>
+                </li>
             </ul>
         </div>
     </div>
