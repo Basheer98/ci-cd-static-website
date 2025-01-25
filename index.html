@@ -6,50 +6,45 @@
     <title>CI/CD Pipeline Deployment</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 min-h-screen flex items-center justify-center p-4">
+<body class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 min-h-screen flex items-center justify-center p-6">
 
-    <div class="bg-white p-10 md:p-14 rounded-lg shadow-lg text-center max-w-2xl w-full">
-        <!-- Animated Heading -->
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 animate-fadeIn">
-            🚀 CI/CD Pipeline Deployed Website
-        </h1>
-        
-        <!-- Subtext -->
-        <p class="text-lg text-gray-600 mt-4 animate-fadeInSlow">
-            This website is automatically deployed using GitHub Actions.
-        </p>
-
-        <!-- Explanation Section -->
-        <div class="mt-6">
-            <h2 class="text-2xl font-semibold text-gray-700">How It Works?</h2>
-            <p class="text-gray-600 mt-2 text-sm md:text-base">
-                - When we push updates to GitHub, GitHub Actions triggers an **automated deployment**. <br>
-                - The website is built and hosted on **GitHub Pages** with **Tailwind CSS** for styling. <br>
-                - Changes are instantly reflected without manual intervention! 🚀
-            </p>
+    <div class="bg-white/20 backdrop-blur-lg shadow-xl rounded-2xl px-10 py-12 text-center w-full max-w-xl animate-fadeIn">
+        <!-- Icon -->
+        <div class="mb-4">
+            <span class="text-6xl">🚀</span>
         </div>
 
-        <!-- Animated Button -->
-        <button class="mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md 
-                       hover:bg-blue-700 transition transform hover:scale-105">
-            Learn More
-        </button>
+        <!-- Heading -->
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg">
+            CI/CD Pipeline <span class="text-yellow-300">Deployed Website</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-lg text-white/80 mt-4 leading-relaxed">
+            This website is <span class="font-semibold">automatically deployed</span> using GitHub Actions and styled with Tailwind CSS.
+        </p>
+
+        <!-- How It Works Section -->
+        <div class="mt-8 text-white text-left space-y-4">
+            <h2 class="text-2xl font-semibold border-b border-white/30 pb-2">How It Works?</h2>
+            <ul class="list-disc list-inside space-y-2 text-white/80">
+                <li>✅ Push updates to GitHub → **Triggers automated deployment**</li>
+                <li>✅ GitHub Actions builds and hosts the site on **GitHub Pages**</li>
+                <li>✅ Tailwind CSS ensures a sleek, modern design</li>
+                <li>✅ Changes are reflected **instantly** without manual intervention 🚀</li>
+            </ul>
+        </div>
     </div>
 
     <style>
-        /* Custom Animations */
+        /* Smooth Fade-in Animation */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInSlow {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
-        .animate-fadeIn { animation: fadeIn 1s ease-out; }
-        .animate-fadeInSlow { animation: fadeInSlow 1.5s ease-out; }
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out;
+        }
     </style>
 
 </body>
