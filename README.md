@@ -42,6 +42,8 @@ Make changes and push:
 	
 GitHub Actions will automatically deploy the updated version.
 
+Website Link: https://basheer98.github.io/ci-cd-static-website/
+
 License
 
 This project is released under the MIT License.
