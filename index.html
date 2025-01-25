@@ -5,22 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CI/CD Pipeline Deployment</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 min-h-screen flex items-center justify-center p-6">
+    <style>
+        /* Smooth Background Gradient Animation */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animate-bg {
+            background-size: 300% 300%;
+            animation: gradientAnimation 12s ease infinite;
+        }
 
-    <div class="bg-white/20 backdrop-blur-lg shadow-xl rounded-2xl px-10 py-12 text-center w-full max-w-xl animate-fadeIn">
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Glowing Text Effect */
+        .glow-text {
+            background: linear-gradient(90deg, #ffdd00, #ff8800, #ff00aa, #8800ff);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientAnimation 5s ease infinite;
+        }
+    </style>
+</head>
+<body class="animate-bg bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 min-h-screen flex items-center justify-center p-6">
+
+    <div class="bg-white/20 backdrop-blur-xl shadow-2xl rounded-3xl px-10 py-12 text-center w-full max-w-2xl animate-fadeIn">
         <!-- Icon -->
         <div class="mb-4">
             <span class="text-6xl">🚀</span>
         </div>
 
-        <!-- Heading -->
-        <h1 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg">
+        <!-- Heading with Glowing Effect -->
+        <h1 class="text-4xl md:text-5xl font-extrabold glow-text drop-shadow-lg">
             CI/CD Pipeline <span class="text-yellow-300">Deployed Website</span>
         </h1>
 
         <!-- Subtitle -->
-        <p class="text-lg text-white/80 mt-4 leading-relaxed">
+        <p class="text-lg text-white/90 mt-4 leading-relaxed">
             This website is <span class="font-semibold">automatically deployed</span> using GitHub Actions and styled with Tailwind CSS.
         </p>
 
@@ -35,17 +65,6 @@
             </ul>
         </div>
     </div>
-
-    <style>
-        /* Smooth Fade-in Animation */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fadeIn {
-            animation: fadeIn 1s ease-out;
-        }
-    </style>
 
 </body>
 </html>
